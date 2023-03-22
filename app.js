@@ -46,7 +46,7 @@ app.post("/api/fileanalyse", (req, res) => {
         res.json({
           name: req.file.originalname,
           type: req.file.mimetype,
-          size: req.file.size,
+          size: req.file.size
         });
         fs.unlinkSync(`./public/uploads/${req.file.filename}`);
       }
